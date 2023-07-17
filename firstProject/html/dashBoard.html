@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Kumbh+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Pridi:wght@300;400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/firstProject/CSS/dashBoard.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <title>Dash Board</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <section class="row">
+            <section class="col-2">
+                <div id="main-logo" class="container text-center">
+                    <img class="rikkei-logo" src="/firstProject/img/imgCommon/index.png" alt="rikkei-logo">
+                    <p>Rikkei Academy</p>
+                </div>
+                <div>
+                    <ul class="nav d-flex flex-column">
+                        <li class="row">
+                            <div class="nav-item">
+                                <i class="fas fa-chart-line"></i>
+                                <a class="text-light text-decoration-none" href="/firstProject/html/dashBoard.html">Dash
+                                    Board</a>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div id="nav-course" class="nav-item">
+                                <i class="fas fa-home"></i>
+                                <a class="text-light text-decoration-none"
+                                    href="/firstProject/html/courseManagement.html">Course
+                                    Management</a>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div id="nav-class" class="nav-item">
+                                <i class="fas fa-university"></i>
+                                <a class="text-light text-decoration-none"
+                                    href="/firstProject/html/classManagement.html">Class
+                                    Management</a>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div id="nav-student" class="nav-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <a class="text-light text-decoration-none"
+                                    href="/firstProject/html/studentManagement.html">Student
+                                    Management</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="col-10">
+                <header>
+                    <p>Education is the key to all the locked doors of the unknown.</p>
+                    <div class="icon-notify">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <button type="submit" id="logout">Log out</button>
+                </header>
+                <main>
+                    <h1>Welcome To Rikkei Academy Administrative Webpage</h1>
+                    <p>Danang - Hanoi - TP.HCM - Fukuoka</p>
+                    <div class="statistic-info">
+                        <div class="statistic-item">
+                            <div class="item-header">
+                                <div><i class="fas fa-sitemap"></i></div>
+                                <p>Course Information</p>
+                            </div>
+                            <small id="course-total"></small>
+                        </div>
+                        <div class="statistic-item">
+                            <div class="item-header">
+                                <div><i class="fas fa-info"></i></div>
+                                <p>Class Information</p>
+                            </div>
+                            <small id="class-total"></small><br>
+                            <small id="waiting-class"></small><br>
+                            <small id="in-progress-class"></small>
+                        </div>
+                        <div class="statistic-item">
+                            <div class="item-header">
+                                <div><i class="fas fa-users"></i></div>
+                                <p>Student Information</p>
+                            </div>
+                            <small id="student-total"></small><br>
+                            <small id="active-student"></small><br>
+                            <small id="inactive-student"></small>
+                        </div>
+                    </div>
+                    <img src="/firstProject/img/chatbot/Component 1.png" alt="chatbot" class="chatBot">
+                </main>
+            </section>
+        </section>
+        <section class="row footer">
+            <div class="col-12 text-center">
+                <p>Copyright &copy; Rikkei Academy</p>
+            </div>
+        </section>
+    </div>
+    <script src="/firstProject/javascript/main.js"></script>
+    <script src="/firstProject/javascript/dashBoard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Comprehensive Assignment</title>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h2>Catalog management system</h2>
+            <form action="#">
+                <label for="catalog-Id">Catalog ID</label>
+                <input type="text" id="catalog-Id" name="catalog-Id" placeholder="Please input catalog ID"><br>
+                <label for="catalog-name">Catalog Name</label>
+                <input type="text" id="catalog-name" name="catalog-name" placeholder="Please input catalog name"><br>
+                <label for="catalog-prior">Priority</label>
+                <input type="number" id="catalog-prior" name="catalog-prior"
+                    placeholder="Please input catalog priority"><br>
+                <label for="catalog-desc">Description</label>
+                <textarea name="catalog-desc" id="catalog-desc" cols="20" rows="5"></textarea><br>
+                <label for="catalog-status">Catalog Status</label>
+                <input type="radio" id="active" name="catalog-status" checked value="Active">
+                <label for="catalog-status">Active</label>
+                <input type="radio" id="inactive" name="catalog-status" value="Inactive">
+                <label for="catalog-status">Inactive</label><br>
+                <button id="save" type="submit">Save</button>
+            </form>
+        </div>
+        <hr>
+        <div>
+            <form action="#">
+                <input type="text" id="key-word" name="key-word">
+                <button type="submit" id="search">Search</button>
+                <label for="sort">Sort by</label>
+                <select name="sort" id="sort" onchange="sortCatalog()">
+                    <option value=""></option>
+                    <option value="catalogName ASC">catalogName ASC</option>
+                    <option value="catalogName DESC">catalogName DESC</option>
+                    <option value="Priority ASC">Priority ASC</option>
+                    <option value="Priority DESC">Priority DESC</option>
+                </select>
+            </form>
+        </div>
+        <hr>
+        <div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Catalog ID</th>
+                        <th>Catalog Name</th>
+                        <th>Priority</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="table-content">
+                    <!-- <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button></button>
+                            <button></button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div class="pageNum">
+                <a href="javascript:backPage()" id="back">Back</a>
+                <ul id="listPages">
+                    <!-- <li><a href=""></a></li> -->
+                </ul>
+                <a href="javascript:nextPage()" id="next">Next</a>
+            </div>
+            <!-- <button type="submit" id="paginate-up" onclick="paginatePageUp()">Next</button>
+            <button type="submit" id="paginate-down" onclick="paginatePageDown()">Prev</button> -->
+        </div>
+    </section>
+    <script src="./main-1.js"></script>
+</body>
+
+</html>

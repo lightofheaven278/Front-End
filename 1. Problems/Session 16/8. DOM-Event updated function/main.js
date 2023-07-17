@@ -123,4 +123,3 @@ btnSort.addEventListener("click", function () {
   arrBooks.sort((a, b) => a.price - b.price);
   displayBookFromArr()
 });
-

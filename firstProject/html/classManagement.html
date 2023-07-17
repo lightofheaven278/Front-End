@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Kumbh+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Pridi:wght@300;400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/firstProject/CSS/classManagement.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <title>Class Management</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <section class="row">
+            <section class="col-2">
+                <div id="main-logo" class="container text-center">
+                    <img class="rikkei-logo" src="/firstProject/img/imgCommon/index.png" alt="rikkei-logo">
+                    <p>Rikkei Academy</p>
+                </div>
+                <div>
+                    <ul class="nav d-flex flex-column">
+                        <li class="row">
+                            <div class="nav-item">
+                                <i class="fas fa-chart-line"></i>
+                                <a class="text-light text-decoration-none" href="/firstProject/html/dashBoard.html">Dash
+                                    Board</a>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div id="nav-course" class="nav-item">
+                                <i class="fas fa-home"></i>
+                                <a class="text-light text-decoration-none"
+                                    href="/firstProject/html/courseManagement.html">Course
+                                    Management</a>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div id="nav-class" class="nav-item">
+                                <i class="fas fa-university"></i>
+                                <a class="text-light text-decoration-none"
+                                    href="/firstProject/html/classManagement.html">Class
+                                    Management</a>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div id="nav-student" class="nav-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <a class="text-light text-decoration-none"
+                                    href="/firstProject/html/studentManagement.html">Student
+                                    Management</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="col-10">
+                <header>
+                    <p>Education is the key to all the locked doors of the unknown.</p>
+                    <div class="icon-notify">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <button type="submit" id="logout">Log out</button>
+                </header>
+                <main>
+                    <h2>Class Management System</h2>
+                    <div class="modify-tool">
+                        <div>
+                            <button type="button" id="add" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#newClass">
+                                Add Class
+                            </button>
+                            <!-- Modal add and update -->
+                            <div class="modal fade" id="newClass" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Class Input Form</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="classId" class="form-label">Class
+                                                    ID:</label>
+                                                <input type="text" class="form-control" id="classId" name="classId"
+                                                    placeholder="Please input class ID">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="className" class="form-label">Class
+                                                    Name:</label>
+                                                <input id="className" name="className" class="form-control" type="text"
+                                                    placeholder="Please input class name"
+                                                    aria-label="default input example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="lecturer" class="form-label">Lecturer:</label>
+                                                <input id="lecturer" name="lecturer" class="form-control" type="text"
+                                                    placeholder="Please input class lecturer"
+                                                    aria-label="default input example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="desc" class="form-label">Description:</label>
+                                                <textarea class="form-control" placeholder="Leave a description here"
+                                                    id="desc"></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="studentNum" class="form-label">Number of
+                                                    Students:</label>
+                                                <input id="studentNum" name="studentNum" class="form-control"
+                                                    type="number" placeholder="Please input number of students in class"
+                                                    aria-label="default input example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="course" class="form-label">Course:</label>
+                                                <select id="course" name="course" class="form-select"
+                                                    aria-label="Default select example">
+                                                </select>
+                                            </div>
+                                            <label for="status" class="form-label">Status:</label><br>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="status" id="waiting"
+                                                    value="Waiting" checked>
+                                                <label class="form-check-label" for="inlineRadio1">Waiting</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="status"
+                                                    id="in-progress" value="In-progress">
+                                                <label class="form-check-label" for="inlineRadio2">In-Progress</label>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" id="save" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal  delete-->
+                            <!-- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Warning</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Please make sure that you wanna delete this class!!!</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary" id="deleteCheck">Ok</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="search">
+                            <input id="keyword" type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-default"
+                                placeholder="Please input keyword of class name">
+                            <button type="submit" id="search">Search</button>
+                        </div>
+                        <div class="sort">
+                            <p>Sort</p>
+                            <select name="sort" id="sort" onchange="sortData()" class="form-select"
+                                aria-label="Default select example">
+                                <option value=""></option>
+                                <option value="Class Name ASC">Class Name ASC</option>
+                                <!-- <option value="Course Duration">Course Duration</option> -->
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Class ID</th>
+                                <th scope="col">Class Name</th>
+                                <th scope="col">Lecturer</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Number Of Students</th>
+                                <th scope="col">Status</th>
+                                <th scope="col" colspan="2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="class-info">
+                        </tbody>
+                    </table>
+                    <div class="paginate">
+                        <button id="prev" type="sumbit" onclick="backPage()">Previous</button>
+                        <ul id="listPage"></ul>
+                        <button id="next" type="sumbit" onclick="nextPage()">Next</button>
+                    </div>
+                </main>
+            </section>
+        </section>
+        <section class="row footer">
+            <div class="col-12 text-center">
+                <p>Copyright &copy; Rikkei Academy</p>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/firstProject/html/dataStorage.html"></script>
+    <script src="/firstProject/javascript/classManagement.js"></script>
+</body>
+
+</html>
